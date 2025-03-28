@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Quản lý playlist</title>
+
+</head>
+
+<body>
+
+    <header>
+        <p class="logo"><img src="" alt="logo"></p>
+        <a href="home" class="home">Home</a>
+        <a href="thongbao" class="thongbao">Thông báo</a>
+        <a href="login.html" class="login">Login</a>
+    </header>
+
+    <div class="menu" id="menu">
+        <div class="toggle" onclick="toggleMenu()">☰</div>
+        <div class="content-a">
+
+            <p> <a href=" index.html">
+                    <h1>DarkMusic</h1>
+                </a></p>
+            <p><a href="quanlynguoidung.html">Quản lý người dùng</a></p>
+            <p><a href="quanlybaihat.html">Quản lý bài hát</a></p>
+            <p><a href="quanlytheloai.html">Quản lý thể loại</a></p>
+            <p><a href="quanlynghesi.html">Quản lý nghệ sĩ</a></p>
+            <p><a href="quanlyalbum.html">Quản lý album</a></p>
+            <p><a href="quanlyquancao.html">Quản lý quảng cáo</a></p>
+            <p><a href="quanlytintuc.html">Quản lý tin tức</a></p>
+            <p style="border: 1px solid black;padding: 10px;"><a href="quanlyplaylist.html">Quản lý playlist</a></p>
+
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Quản lý playlist</h1>
+        <div class="content">
+            <div class="search">
+                <form action="" method="get">
+                    <input type="text" name="query" placeholder="Tìm kiếm">
+                    <button type="submit">Tìm</button>
+
+                </form>
+                <button class="add-button" onclick="showDialog('addDialog')">Thêm PlayList</button>
+
+            </div>
+
+            <div class="list">
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên playlist</th>
+                        <th>Số bài</th>
+                        <th>Thể loại</th>
+                        <th>Người tạo</th>
+                        <th>CRUD</th>
+
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td><button class="edit" onclick="showDialog('editDialog')">Sửa</button>
+                            <button class="delete" onclick="showDialog('deleteDialog')">Xóa</button>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div id="addDialog">
+        <h2>Thêm PlayList</h2>
+        <form>
+            <label for="stt">STT:</label>
+            <input type="text" id="stt" required><br>
+            <label for="tenplaylist">Tên playlist:</label>
+            <input type="text" id="tenplaylist" required><br>
+            <label for="sobai">Số Bài:</label>
+            <input type="text" id="sobai" required><br>
+            <label for="theloai">Thể loại:</label>
+            <input type="text" id="theloai" required><br>
+            <label for="nguoitao">Người tạo:</label>
+            <input type="text" id="nguoitao" required><br>
+
+            <button type="button" onclick="hideDialog('addDialog')">Hủy</button>
+            <button type="submit">Thêm</button>
+        </form>
+    </div>
+
+    <div id="editDialog">
+        <h2>Sửa PlayList</h2>
+        <form>
+            <label for="stt">STT:</label>
+            <input type="text" id="stt" required><br>
+            <label for="tenplaylist">Tên playlist:</label>
+            <input type="text" id="tenplaylist" required><br>
+            <label for="sobai">Số Bài:</label>
+            <input type="text" id="sobai" required><br>
+            <label for="theloai">Thể loại:</label>
+            <input type="text" id="theloai" required><br>
+            <label for="nguoitao">Người tạo:</label>
+            <input type="text" id="nguoitao" required><br>
+
+            <button type="button" onclick="hideDialog('editDialog')">Hủy</button>
+            <button type="submit">Lưu</button>
+        </form>
+    </div>
+
+    <div id="deleteDialog">
+        <h2>Xóa PlayList</h2>
+        <p>Bạn có chắc chắn muốn xóa playlist này không?</p>
+        <button type="button" onclick="hideDialog('deleteDialog')">Hủy</button>
+        <button type="button">Xóa</button>
+    </div>
+
+    <script>
+        function showDialog(id) {
+            const dialog = document.getElementById(id);
+            if (dialog) {
+                dialog.style.display = 'block';
+            }
+        }
+
+        function hideDialog(id) {
+            const dialog = document.getElementById(id);
+            if (dialog) {
+                dialog.style.display = 'none';
+            }
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>

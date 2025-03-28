@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Quản lý thư mục</title>
+
+</head>
+
+<body>
+
+    <header>
+        <p class="logo"><img src="" alt="logo"></p>
+        <a href="home" class="home">Home</a>
+        <a href="thongbao" class="thongbao">Thông báo</a>
+        <a href="login.html" class="login">Login</a>
+    </header>
+
+    <div class="menu" id="menu">
+        <div class="toggle" onclick="toggleMenu()">☰</div>
+        <div class="content-a">
+
+            <p> <a href=" index.html">
+                    <h1 style="border: 1px solid black;padding: 10px;">DarkMusic</h1>
+                </a></p>
+            <p><a href="quanlynguoidung.html">Quản lý người dùng</a></p>
+            <p><a href="quanlybaihat.html">Quản lý bài hát</a></p>
+            <p><a href="quanlytheloai.html">Quản lý thể loại</a></p>
+            <p><a href="quanlynghesi.html">Quản lý nghệ sĩ</a></p>
+            <p><a href="quanlyalbum.html">Quản lý album</a></p>
+            <p><a href="quanlyquancao.html">Quản lý quảng cáo</a></p>
+            <p><a href="quanlytintuc.html">Quản lý tin tức</a></p>
+            <p><a href="quanlyplaylist.html">Quản lý playlist</a></p>
+
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Trang quản lý admin</h1>
+        <div class="content">
+            <div class="search">
+                <form action="" method="get">
+                    <input type="text" name="query" placeholder="Tìm kiếm">
+                    <button type="submit">Tìm</button>
+                    <button>
+                        <a href="themmoi.html">Thêm mới</a>
+                    </button>
+                </form>
+            </div>
+
+            <div class="list">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>User Name</th>
+                        <th>Pass Word</th>
+                        <th>Vai Trò</th>
+                        <th>Sửa Tài khoản</th>
+                        <th>Vô Hiệu Hóa</th>
+
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td><button class="edit" onclick="showDialog('editDialog')">Sửa</button>
+                            <button class="delete" onclick="showDialog('deleteDialog')">Xóa</button>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("open");
+        }
+    </script>
+
+</body>
+
+</html>

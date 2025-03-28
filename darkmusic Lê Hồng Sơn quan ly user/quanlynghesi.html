@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Quản lý nghệ sĩ</title>
+
+</head>
+
+<body>
+
+    <header>
+        <p class="logo"><img src="" alt="logo"></p>
+        <a href="home" class="home">Home</a>
+        <a href="thongbao" class="thongbao">Thông báo</a>
+        <a href="login.html" class="login">Login</a>
+    </header>
+
+    <div class="menu" id="menu">
+        <div class="toggle" onclick="toggleMenu()">☰</div>
+        <div class="content-a">
+
+            <p> <a href=" index.html">
+                    <h1>DarkMusic</h1>
+                </a></p>
+            <p><a href="quanlynguoidung.html">Quản lý người dùng</a></p>
+            <p><a href="quanlybaihat.html">Quản lý bài hát</a></p>
+            <p><a href="quanlytheloai.html">Quản lý thể loại</a></p>
+            <p style="border: 1px solid black;padding: 10px;"><a href="quanlynghesi.html">Quản lý nghệ sĩ</a></p>
+            <p><a href="quanlyalbum.html">Quản lý album</a></p>
+            <p><a href="quanlyquancao.html">Quản lý quảng cáo</a></p>
+            <p><a href="quanlytintuc.html">Quản lý tin tức</a></p>
+            <p><a href="quanlyplaylist.html">Quản lý playlist</a></p>
+
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Quản lí nghệ sĩ</h1>
+        <div class="content">
+            <div class="search">
+                <form action="" method="get">
+                    <input type="text" name="query" placeholder="Tìm kiếm">
+                    <button type="submit">Tìm</button>
+
+                </form>
+                <button class="add-button" onclick="showDialog('addDialog')">Thêm nghệ sĩ</button>
+
+            </div>
+
+            <div class="list">
+                <table>
+                    <tr>
+                        <th>Stt</th>
+                        <th>Tên nghệ sĩ</th>
+                        <th>Lĩnh vực</th>
+                        <th>Quốc Gia</th>
+                        <th>Ghi chú</th>
+                        <th>CRUD</th>
+
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td><button class="edit" onclick="showDialog('editDialog')">Sửa</button>
+                            <button class="delete" onclick="showDialog('deleteDialog')">Xóa</button>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="addDialog">
+        <h2>Thêm Nghệ Sĩ</h2>
+        <form>
+            <label for="stt">STT:</label>
+            <input type="text" id="stt" required><br>
+            <label for="tennghesi">Tên nghệ sĩ:</label>
+            <input type="text" id="tennghesi" required><br>
+            <label for="lingvuc">Lĩnh vực:</label>
+            <input type="text" id="lingvuc" required><br>
+            <label for="quocgia">Quốc gia:</label>
+            <input type="text" id="quocgia" required><br>
+            <label for="ghichu">Ghi chú:</label>
+            <input type="text" id="albumName" required><br>
+
+            <button type="button" onclick="hideDialog('addDialog')">Hủy</button>
+            <button type="submit">Thêm</button>
+        </form>
+    </div>
+
+    <div id="editDialog">
+        <h2>Sửa Nghệ Sĩ</h2>
+        <form>
+            <label for="stt">STT:</label>
+            <input type="text" id="stt" required><br>
+            <label for="tennghesi">Tên nghệ sĩ:</label>
+            <input type="text" id="tennghesi" required><br>
+            <label for="lingvuc">Lĩnh vực:</label>
+            <input type="text" id="lingvuc" required><br>
+            <label for="quocgia">Quốc gia:</label>
+            <input type="text" id="quocgia" required><br>
+            <label for="ghichu">Ghi chú:</label>
+            <input type="text" id="albumName" required><br>
+
+            <button type="button" onclick="hideDialog('editDialog')">Hủy</button>
+            <button type="submit">Lưu</button>
+        </form>
+    </div>
+
+    <div id="deleteDialog">
+        <h2>Xóa Nghệ Sĩ</h2>
+        <p>Bạn có chắc chắn muốn xóa nghệ sĩ này không?</p>
+        <button type="button" onclick="hideDialog('deleteDialog')">Hủy</button>
+        <button type="button">Xóa</button>
+    </div>
+
+    <script>
+        function showDialog(id) {
+            const dialog = document.getElementById(id);
+            if (dialog) {
+                dialog.style.display = 'block';
+            }
+        }
+
+        function hideDialog(id) {
+            const dialog = document.getElementById(id);
+            if (dialog) {
+                dialog.style.display = 'none';
+            }
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>
