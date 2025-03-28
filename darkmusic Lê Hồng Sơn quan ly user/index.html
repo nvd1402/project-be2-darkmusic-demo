@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Quản lý admin</title>
+    <style>
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .d1,
+        .d2,
+        .d3,
+        .d4 {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid black;
+            padding: 20px;
+            background-color: bisque;
+        }
+
+        .d1 div,
+        .d2 div,
+        .d3 div,
+        .d4 div {
+            border: 1px solid black;
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px;
+            background-color: #f0f8ff;
+            color: #333;
+
+            font-weight: bold;
+            background-color: aqua;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p class="logo"><img src="" alt="logo"></p>
+        <a href="home" class="home">Home</a>
+        <a href="thongbao" class="thongbao">Thông báo</a>
+        <a href="login.html" class="login">Login</a>
+    </header>
+
+    <div class="menu" id="menu">
+        <div class="toggle" onclick="toggleMenu()">☰</div>
+        <div class="content-a">
+
+            <p> <a href=" index.html">
+                    <h1 style="border: 1px solid black;padding: 10px;">DarkMusic</h1>
+                </a></p>
+            <p><a href="quanlynguoidung.html
+                ">Quản lý người dùng</a></p>
+            <p><a href="quanlybaihat.html">Quản lý bài hát</a></p>
+            <p><a href="quanlytheloai.html">Quản lý thể loại</a></p>
+            <p><a href="quanlynghesi.html">Quản lý nghệ sĩ</a></p>
+            <p><a href="quanlyalbum.html">Quản lý album</a></p>
+            <p><a href="quanlyquancao.html">Quản lý quảng cáo</a></p>
+            <p><a href="quanlytintuc.html">Quản lý tin tức</a></p>
+            <p><a href="quanlyplaylist.html">Quản lý playlist</a></p>
+
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Quản lý admin</h1>
+        <div class="content">
+            <div class="d1">
+                <div> Quản lý bài hát</div>
+                <div>Quản lý thể loại </div>
+            </div>
+            <div class="d2">
+                <div>Quản lý nghệ sĩ </div>
+                <div> Quản lý album </div>
+            </div>
+            <div class="d3">
+                <div>Quản lý quảng cáo </div>
+                <div>Quản lý tin tức </div>
+            </div>
+            <div class="d4">
+                <div>Quản lý playlist</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("open");
+        }
+    </script>
+
+</body>
+
+</html>
