@@ -1,0 +1,292 @@
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background:linear-gradient(135deg, #6a5acd, #007bff);
+        }
+        h1{
+            color: chocolate;
+        }
+
+        header {
+            background-color:#f0f0f0;
+            color: white;
+            padding: 12px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        header p {
+            margin: 0;
+        }
+
+        header .login {
+            background-color:#00ffea;
+            padding: 5px 20px;
+            border-radius: 20px;
+            margin-right: 50px;
+            text-decoration: none;
+            color: #000000;
+
+
+        }
+
+        header .thongbao {
+            background-color:#00ffea;
+            padding: 5px 10px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #000000;
+
+
+
+        }
+
+        header .home {
+            background-color:#00ffea;
+            padding: 5px 10px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #000000;
+            margin-right: 5px;
+
+
+
+        }
+
+
+
+        header .login:hover {
+            background-color: #666;
+        }
+
+        header .home:hover {
+            background-color: #666;
+        }
+
+        header .thongbao:hover {
+            background-color: #666;
+        }
+
+        .menu {
+            height: 100%;
+            width: 60px;
+            position: fixed;
+            top: 50px;
+            left: 0;
+            background-color: #00ffff;
+            color: rgb(0, 255, 166);
+            transition: width 0.3s;
+            overflow-x: hidden;
+        }
+
+        .menu.open {
+            width: 200px;
+        }
+
+        .menu .toggle {
+            background-color: #000000;
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu .content-a {
+            padding: 10px;
+            display: none;
+        }
+
+        .menu.open .content-a {
+            display: block;
+        }
+
+        .main-content {
+            margin-left: 60px;
+            margin-top: 70px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+
+
+        }
+
+        .menu.open~.main-content {
+            margin-left: 200px;
+        }
+
+        .content {
+            border: 1px solid black;
+
+
+        }
+
+        .content .search {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+        a:visited {
+            color: rgb(247, 0, 255);
+        }
+
+
+        .content .list {
+
+
+            padding: 20px;
+
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            background-color: turquoise;
+            color: #5a52ed;
+        }
+        .search{
+            background-color: #ff7eb3;
+        }
+.content{
+    background-color: azure;
+}
+
+        table {
+            border: 1px solid black;
+
+
+        }
+
+
+   
+        .edit {
+            background-color: #007bff;
+        }
+
+        .delete {
+            background-color:#dc3545;
+        }
+
+        .add-button {
+            background-color: #28a745;
+        }
+  
+
+       
+        #addDialog,
+        #editDialog,
+        #deleteDialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+  
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dialog Styling */
+div[id$='Dialog'] {
+    background: linear-gradient(135deg, #ff7eb3, #ff758f);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Headers */
+div[id$='Dialog'] h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Form Labels */
+div[id$='Dialog'] label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+/* Form Inputs */
+div[id$='Dialog'] input[type='text'] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+div[id$='Dialog'] button {
+    background-color: #5a52ed;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 1em;
+    box-shadow: 0 4px 10px rgba(90, 82, 237, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+div[id$='Dialog'] button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(90, 82, 237, 0.7);
+}
+
+div[id$='Dialog'] button:active {
+    transform: scale(0.95);
+}
+
+/* Cancel Button */
+div[id$='Dialog'] button[type='button'] {
+    background-color: #ff5757;
+}
+
+div[id$='Dialog'] button[type='button']:hover {
+    background-color: #ff3d3d;
+}
